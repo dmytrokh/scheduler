@@ -1,0 +1,203 @@
+/**
+ *  Do not remove this comments bellow. It's the markers used by wiredep to inject
+ *  stylus dependencies when defined in the bower.json of your dependencies
+ */
+// bowerstyl
+// endbower
+
+navbar_size = 70px
+timeline_width = 70px
+timeline_item_height = 30px
+
+.sched-row, .sched-col
+  overflow hidden
+  position absolute
+
+.sched-row
+  left 0
+  right 0
+
+.sched-col
+  top 0
+  bottom 0
+
+.sched-scroll-x
+.sched-scroll-y
+  overflow-y auto
+
+.sched-left.sched-col
+  width timeline_width
+
+.sched-right.sched-col
+  left timeline_width
+  right 0
+
+.sched-left.sched-body.sched-row
+  top 152px
+  bottom 26px
+
+.sched-right.sched-body.sched-row
+  top 100px
+  bottom 0px
+
+.stretched
+  display block
+  position absolute
+  top 0
+  right 0
+  bottom 0
+  left 0
+  height auto
+
+.sched-timeline-item
+  height timeline_item_height
+  font-size 12px
+  text-align right
+  border-top 1px solid white
+
+.sched-content
+  margin 20px 5px 5px 5px
+  border 1px solid #616161
+  border-radius: 5px
+  min-width 570px
+  min-height 353px
+  overflow visible
+
+.sched-content-caption
+  width 102px
+  margin-top -13px
+  margin-left 20px
+  background #fff
+  font-size 18px
+
+.sched-navigate
+  height navbar_size
+  display flex
+  flex-direction row
+  text-align center
+  vertical-align middle
+
+.sched-table
+  display flex
+  flex-direction row
+  margin 0px 1px 0px 1px
+  overflow visible
+  padding-bottom 10px
+
+.sched-cell
+  flex-wrap nowrap
+  top 0
+  bottom 0
+  height 100%
+  width 14%
+  border 1px solid #616161
+  margin-left 1px
+  margin-right 1px
+  margin-bottom 2px
+
+.shred-cell-inside
+  position relative
+  overflow visible
+  height 100%
+  width 100%
+
+.sched-cell-caption
+  margin-top -7px
+  width 90%
+  background-color #fff
+  margin-left 5%
+  text-align center
+  font-size 14px
+
+.sched-timetable-container
+  overflow hidden
+  top 15px
+  right 2px
+
+.sched-timetable
+  overflow-y auto
+  display block
+  position absolute
+  top 0
+  right -14px
+  bottom 0
+  left 0
+  margin 20px 2px 0px 2px
+
+.sched-timetable-item
+  height timeline_item_height
+  border-top 1px solid #E1E8ED
+
+.sched-today
+  background-color beige
+
+.sched-today-cell-caption
+  color red
+
+.sched-button
+  text-decoration none
+  padding 10px 19px
+  font-size 17px
+  font-weight 400
+  line-height 1.471
+  border-radius 5px
+  color black
+  background-color whitesmoke
+  border 1px solid #E1E8ED
+  vertical-align middle
+  cursor pointer
+  text-align center
+  margin-bottom 0
+  height 24px
+  width 80px
+
+a.button:hover, a.button:visited
+  text-decoration none
+
+.sched-navigate-leftbtn, .sched-navigate-rightbtn
+  width 20%
+  text-align center
+
+.sched-navigate-title-block
+  width 60%
+
+.sched-navigate-title
+  margin 0
+
+.sched-dropdown-time
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  -o-appearance:none;
+  appearance:none;
+  background-image url('/assets/clock-time.png')
+  background-repeat no-repeat
+  background-size contain
+  background-position right
+
+.sched-modal-coment
+ max-width 100%
+
+.top10
+  margin-top 10px
+
+.sched-event
+  background-color #EEEEEE
+  border 1px solid #CCCCCC
+  border-radius 5px
+  position absolute
+  width 100%
+  left 0
+  color #616161
+
+.sched-event-name
+  text-overflow ellipsis
+  margin 3px
+
+
+
+/**
+ *  Do not remove this comments bellow. It's the markers used by gulp-inject to inject
+ *  all your stylus files automatically
+ */
+// injector
+// endinjector

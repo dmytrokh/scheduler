@@ -1,0 +1,14 @@
+div.modal-header.text-center
+  h3.modal-title {{title}}
+
+div.modal-body
+  div.row.top10
+    div.col-xs-1
+    div.col-xs-10
+      div.text-center Удалить событие &#39;{{eventName}}&#39;?
+    div.col-xs-1
+
+div.modal-footer
+  button.btn.btn-primary(type="button", ng-click="yes()") Да
+  button.btn.btn-warning(type="button", ng-click="cancel()") Отмена
+

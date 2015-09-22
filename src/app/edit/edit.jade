@@ -1,0 +1,35 @@
+div.modal-header.text-center
+  h3.modal-title {{editTitle()}}
+
+div.modal-body
+
+  div.row
+    div.col-xs-1
+    div.col-xs-3
+        select.form-control.sched-dropdown-time(id="startTime" ng-model="event.startTimeId"
+        ng-options="f.id as f.label for f in timeIds")
+          option
+    div.col-xs-4
+    div.col-xs-3
+        select.form-control.sched-dropdown-time(id="startTime" ng-model="event.endTimeId"
+        ng-options="f.id as f.label for f in timeIds")
+          option
+    div.col-xs-1
+
+  div.row.top10
+    div.col-xs-1
+    div.col-xs-10
+      input.form-control(placeholder="Название" ng-model="event.name")
+    div.col-xs-1
+
+  div.row.top10
+    div.col-xs-1
+    div.col-xs-10
+      textarea.form-control.sched-modal-coment(placeholder="Комментарий" ng-model="event.comment" rows="8")
+    div.col-xs-1
+
+
+div.modal-footer
+  button.btn.btn-primary(type="button", ng-click="save()") Сохранить
+  button.btn.btn-alert(type="button", ng-click="delete()", style='{{editButtonVisible}}') Удалить
+  button.btn.btn-warning(type="button", ng-click="cancel()") Отмена

@@ -1,0 +1,17 @@
+div(ng-controller='MainCtrl')
+
+  div.sched-left.sched-col
+    div.anim-fade.sched-left.sched-body.sched-row(scrolly="scheduler-scroll")
+      - for (var x = 0; x < 24; x++)
+          div.sched-timeline-item #{('0'+x).match(/..$/)[0] + ':00'}
+
+  div.sched-right.sched-col.sched-content
+    p.sched-content-caption Ежедневник
+    div.sched-navigate
+      div.sched-navigate-leftbtn
+        a.btn.btn-default(ui-sref="home.schedule({ dayId: nextMondayId })", ui-sref-opts="{reload: true}") Prev week
+      div.sched-navigate-title-block
+        h1.anim-fade.sched-navigate-title {{getYearTitle()}}
+      div.sched-navigate-rightbtn
+        a.btn.btn-default(ui-sref="home.schedule({ dayId: prevMondayId })", ui-sref-opts="{reload: true}") Next week
+    div.anim-fade.sched-right.sched-body.sched-row.sched-table(ui-view)

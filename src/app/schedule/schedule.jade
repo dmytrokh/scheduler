@@ -1,0 +1,16 @@
+div.sched-cell(ng-repeat='dailyShedule in week', id='cell_{{dailyShedule.dayId}}')
+  div.shred-cell-inside
+    p.sched-cell-caption(class='{{isToday(dailyShedule.day) && "sched-today-cell-caption" || ""}}') {{dayTitle(dailyShedule.day)}}
+    div.sched-timetable-container.stretched
+      div.sched-timetable(scrolly="scheduler-scroll", id='cell_{{dailyShedule.dayId}}')
+        - var isTodayClass = '{{isToday(dailyShedule.day) && "sched-today" || ""}}'
+        - for (var x = 0; x < 24; x++)
+          - var openEditModal = 'openEditModal({dailyShedule: dailyShedule, timeId: ' + x + '})'
+           div.sched-timetable-item(ng-click=openEditModal, class=isTodayClass)
+        div.sched-event(ng-repeat='event in dailyShedule.dayData'
+          ng-click='openEditModal({dailyShedule: dailyShedule, event: event})'
+          ng-style='{top:event.startTimeId*30, height:(event.endTimeId - event.startTimeId)*30}')
+          div.sched-event-name {{event.name}}
+
+
+
