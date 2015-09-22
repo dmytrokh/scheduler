@@ -1,5 +1,5 @@
 # scheduler
-Simple scheduler on AngularJS with store data in localStorage
+Simple scheduler written in javascript using AngularJS with store data in localStorage
 
 ## Install
 
