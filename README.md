@@ -4,6 +4,7 @@ Simple scheduler written in javascript using AngularJS with store data in localS
 ## Install
 
 Clone the repository using [git][git]:
+
     git clone https://github.com/dmytrokh/scheduler.git <new-folder-name>
     cd <new-folder-name>
 
