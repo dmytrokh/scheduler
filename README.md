@@ -5,7 +5,7 @@ Simple scheduler written in javascript using AngularJS with store data in localS
 
 You need [git][git] to clone repository.
 
-Also You must have [node.js][node.js], its package manager [npm][npm] installed
+Also You must have [node.js][node.js] and its package manager [npm][npm] installed
 
 ..and [bower][bower] to install dependencies
 
@@ -22,7 +22,7 @@ Clone the repository using [git][git]:
     $ npm install
     $ bower install
 
-### Running the development server
+### Running development server
     $ gulp serve
     
 App will be available at 
