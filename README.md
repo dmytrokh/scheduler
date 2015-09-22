@@ -18,7 +18,7 @@ Clone the repository using [git][git]:
     $ npm install
     $ bower install
 
-### Running the test server
+### Running the development server
     $ gulp serve
 
 ### Running the tests  
