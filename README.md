@@ -29,7 +29,7 @@ App will be available at
 
     http://localhost:3000/
 
-### Running the tests  
+### Running tests  
     $ gulp test
 
 
