@@ -16,6 +16,11 @@
   "devDependencies": {
     "angular-mocks": "~1.4.0"
   },
+  "overrides": {
+    "angular-ui-router-anim-in-out": {
+      "main": ["anim-in-out.js", "css/anim-in-out.css"]
+    }
+  },
   "resolutions": {
     "jquery": "~2.1.4",
     "angular": "~1.4.0"
