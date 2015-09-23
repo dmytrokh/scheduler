@@ -6,10 +6,12 @@ angular.module "scheduler"
     calendar = calendarProvider.$get()
     CurrentDayId = calendar.getDayId(calendar.currentDay)
 
+    # Better move to stateProvider state. Add controller with redirect logic
     $urlRouterProvider.when "", "/home/schedule/" + CurrentDayId
     $urlRouterProvider.when "/", "/home/schedule/" + CurrentDayId
     $urlRouterProvider.otherwise "/home/schedule/" + CurrentDayId
 
+    # Better extract index state and app controller
     $stateProvider
       .state "home",
         abstract: true
@@ -25,5 +27,3 @@ angular.module "scheduler"
         controller: "ScheduleCtrl"
         controllerAs: "schedule"
         templateUrl: "app/schedule/schedule.html"
-
-
