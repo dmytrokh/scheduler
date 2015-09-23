@@ -3,6 +3,9 @@
 angular.module 'scheduler'
   .factory 'calendar', (eventItem) ->
 
+    # Better use model logic. It's easy way to modify to RestAPI storage
+    # For example - rails-angular-resourse (model logic, list and inited object) 
+
     storagePrefix = 'sched'
 
     setStoragePrefix = (newPrefix) ->
@@ -125,7 +128,3 @@ angular.module 'scheduler'
       return
 
     ret = eventItem
-
-
-
-

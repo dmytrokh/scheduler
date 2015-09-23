@@ -20,6 +20,7 @@ angular.module 'scheduler'
     $scope.isToday = calendar.isToday
 
     $scope.openEditModal = (clickedObj) ->
+      # Dublication. If we pass flag to template we can avoid dublication 
       editInstance = $modal.open
         animation: true,
         templateUrl: 'app/edit/edit.html',

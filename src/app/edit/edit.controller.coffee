@@ -12,7 +12,7 @@ angular.module 'scheduler'
     if clickedObj.timeId != undefined
       $scope.event.startTimeId = clickedObj.timeId
       $scope.event.endTimeId = clickedObj.timeId + 1
-      $scope.editButtonVisible = 'display: none'
+      $scope.editButtonVisible = 'display: none' # Wrong way to store styles at view
 
     $scope.editTitle = ->
       if clickedObj.event
@@ -21,6 +21,7 @@ angular.module 'scheduler'
       return 'Добавить событие'
 
     checkEvent = (event) ->
+      # Better extract sub methods
       if event.startTimeId == event.endTimeId
         toastr.error 'Неверно указано время'
         return false
@@ -32,6 +33,7 @@ angular.module 'scheduler'
       for existEvent in dayData
         if existEvent.id == event.id
           continue
+        # Move method to model
         P1a = event.startTimeId
         P1b = event.endTimeId
         P2a = existEvent.startTimeId
@@ -44,6 +46,7 @@ angular.module 'scheduler'
       true
 
     confirm = () ->
+      # Better to return state and pass flag to template
       confirmInstance = $modal.open
         animation: true,
         size: 'sm',
