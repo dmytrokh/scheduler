@@ -2,5 +2,4 @@ node_modules/
 bower_components/
 .idea/
 .tmp/
-dist/
 src/tests/

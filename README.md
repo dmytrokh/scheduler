@@ -1,6 +1,9 @@
 # scheduler
 Simple scheduler written in javascript using AngularJS with store data in localStorage
 
+## Demo
+  [scheduler](http://dmytrokh.github.io/scheduler)
+
 ## Prerequisites
 
 You need [git][git] to clone repository.
